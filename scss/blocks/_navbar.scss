@@ -2,11 +2,29 @@
 
     &__list {
 
+        display: flex;
+        gap: 58px;
+
         &-item {
 
             a {
                 @include fontsStyles;
             }
+
         }
     }
+
+
+}
+
+.navbar__list-item a:hover {
+    color: $--first-color;
+}
+
+@media only screen and (max-width: 1000px){
+
+    .navbar {
+        display: none;
+    }
+    
 }

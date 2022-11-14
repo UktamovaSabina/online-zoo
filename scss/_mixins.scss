@@ -4,3 +4,12 @@
     line-height: 140%;
     color: $--second-color;
 }
+
+
+@mixin Burger ($position: relative) {
+    position: $position;
+    width: 18px;
+    height: 2px;
+    background-color: $--second-color;
+    border-radius: 2px;
+}

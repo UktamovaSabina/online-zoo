@@ -1,9 +1,64 @@
 .header {
     background-color: #000;
 
+
     &__container {
         display: flex;
         padding: 14px 0;
         align-items: center;
+        justify-content: space-between;
+
+        .header-logo-and-navbar {
+
+            max-width: 617px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+
+        .header-link {
+            @include fontsStyles;
+
+        }
+
+        .burger {
+            display: none;
+            @include Burger;
+            margin-right: 20px;
+
+            @media screen and (max-width: 999px) {
+                & {
+                    display: block;
+                }
+
+            }
+
+
+            &::before {
+                @include Burger (absolute);
+                content: '';
+                left: 0;
+                top: -4px;
+            }
+
+            &::after {
+                @include Burger (absolute);
+                content: '';
+                left: 0;
+                bottom: -5px;
+            }
+        }
+
     }
+
+}
+
+@media screen and (max-width: 999px) {
+    .header-link {
+        display: none;
+    }
+
 }

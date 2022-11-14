@@ -1,3 +1,102 @@
 .intro-section {
-    background-color: aqua;
+
+    background-image: url(/images/Giant-Panda-background-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    &__container {
+
+
+        text-align: right;
+
+
+        .intro-section__info {
+
+            display: inline-block;
+            padding-top: 86px;
+            padding-bottom: 100px;
+            text-align: center;
+
+            h1 {
+                position: relative;
+                max-width: 500px;
+                width: 100%;
+                margin: 0;
+                margin-bottom: 60px;
+                text-align: center;
+                font-weight: 700;
+                font-size: 85px;
+                line-height: 75%;
+                text-transform: uppercase;
+                color: $--second-color;              
+                z-index: 2;
+
+                &::before {
+                    position: absolute;
+                    top: -50px;
+                    left: -20px;
+                    display: block;
+                    content: '';
+                    width: 367px;
+                    height: 367px;
+                    background-color: $--first-color;
+                    border-radius: 50%;
+                    z-index: -10;
+                    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+                }
+
+                span {
+                    color: $--third-color;
+                }
+            }
+
+            .intro__btn {
+
+                @include fontsStyles;
+                display: block;
+                width: 298px;
+                text-align: center;
+                padding-top: 16px;
+                padding-bottom: 16px;
+                margin: 0 auto;
+                color: $--second-color;
+                background-color: $--first-color;
+                border-radius: 25px;
+                text-transform: uppercase;
+                z-index: 20;
+            }
+
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .intro-section__container {
+        position: relative;
+    }
+
+    .intro__btn {
+        position: absolute;
+        top: 410px;
+        left: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    .intro-section {
+        position: relative;
+    }
+
+    .intro__btn {
+        position: absolute;
+        top: 600px;
+        right: auto;
+        left: auto;
+    }
 }
